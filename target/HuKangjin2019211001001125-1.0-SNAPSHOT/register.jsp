@@ -5,12 +5,7 @@
   Time: 16:26
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
-<head>
-    <title>Title</title>
-</head>
-<body>
+<%@include file="header.jsp"%><br/>
 <form method="post" action="config">
     username<input type="text" name="username"/><br/>
     studentid<input type="text" name="studentid"/><br />
@@ -20,6 +15,5 @@
     Date of Birth :<input type="text" name="birthDate"><br/>
     <input type="submit" value="config"/>
 </form>
+<%@include file="footer.jsp"%>
 
-</body>
-</html>
