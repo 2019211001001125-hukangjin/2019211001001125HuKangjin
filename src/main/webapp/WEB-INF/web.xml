@@ -3,6 +3,22 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
+    <context-param>
+        <param-name>driver</param-name>
+        <param-value>com.microsoft.sqlserver.jdbc.SQLServerDriver</param-value>
+    </context-param>
+    <context-param>
+        <param-name>url</param-name>
+        <param-value>jdbc:sqlserver://localhost;databaseName=userdb</param-value>
+    </context-param>
+    <context-param>
+        <param-name>username</param-name>
+        <param-value>sa</param-value>
+    </context-param>
+    <context-param>
+        <param-name>password</param-name>
+        <param-value>admin123456789</param-value>
+    </context-param>
     <servlet>
         <servlet-name>1</servlet-name>
         <servlet-class>com.dabing.week2.demo.HelloWorldServlet</servlet-class>
@@ -11,35 +27,38 @@
         <servlet-name>LifeCycleServlet</servlet-name>
         <servlet-class>com.hukangjin.week3.demo.LifeCycleServlet</servlet-class>
     </servlet>
-    <servlet>
+
+<!--    <servlet>
         <servlet-name>RegisterServlet</servlet-name>
         <servlet-class>com.hukangjin.week3.demo.RegisterServlet</servlet-class>
     </servlet>
+    <servlet-mapping>
+        <servlet-name>RegisterServlet</servlet-name>
+        <url-pattern>/register</url-pattern>
+    </servlet-mapping>-->
+
     <servlet>
         <servlet-name>JDBCDemoServlet</servlet-name>
         <servlet-class>com.hukangjin.week4.demo.JDBCDemoServlet</servlet-class>
-        <init-param>
-            <param-name>driver</param-name>
-            <param-value>com.microsoft.sqlserver.jdbc.SQLServerDriver</param-value>
-        </init-param>
-        <init-param>
-            <param-name>url</param-name>
-            <param-value>jdbc:sqlserver://localhost;databaseName=userdb</param-value>
-        </init-param>
-        <init-param>
-            <param-name>username</param-name>
-            <param-value>sa</param-value>
-        </init-param>
-        <init-param>
-            <param-name>password</param-name>
-            <param-value>admin123456789</param-value>
-        </init-param>
         <load-on-startup>1</load-on-startup>
     </servlet>
     <servlet>
         <servlet-name>ConfigDemoServlet</servlet-name>
         <servlet-class>com.ConfigDemoServlet</servlet-class>
     </servlet>
+ <!--   <servlet>
+        <servlet-name>SearchServlet</servlet-name>
+        <servlet-class>com.hukangjin.week6.demo.SearchServlet</servlet-class>
+    </servlet>
+        <servlet-mapping>
+            <servlet-name>SearchServlet</servlet-name>
+            <url-pattern>/search</url-pattern>
+        </servlet-mapping>
+    -->
+    <!--<servlet>
+        <servlet-name>RediectServle</servlet-name>
+        <servlet-class>com.hukangjin.week6.demo.RediectServle</servlet-class>
+    </servlet>-->
     <servlet-mapping>
         <servlet-name>1</servlet-name>
         <url-pattern>/hello</url-pattern>
@@ -49,10 +68,6 @@
         <url-pattern>/life</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>RegisterServlet</servlet-name>
-        <url-pattern>/register</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
         <servlet-name>JDBCDemoServlet</servlet-name>
         <url-pattern>/jdbc</url-pattern>
     </servlet-mapping>
@@ -60,6 +75,4 @@
         <servlet-name>ConfigDemoServlet</servlet-name>
         <url-pattern>/config</url-pattern>
     </servlet-mapping>
-
-
 </web-app>
