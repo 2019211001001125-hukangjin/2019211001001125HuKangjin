@@ -20,7 +20,7 @@ import java.sql.*;
         //},loadOnStartup = 1
 //)
 //@WebServlet(urlPatterns = {"/register"})
-@WebServlet(urlPatterns = {"/register"},loadOnStartup = 1)
+//@WebServlet(urlPatterns = {"/register"},loadOnStartup = 1)
 public class RegisterServlet extends HttpServlet {
     Connection con=null;
     public void init() throws ServletException {
