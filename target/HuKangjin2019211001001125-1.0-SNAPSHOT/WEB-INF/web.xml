@@ -28,14 +28,14 @@
         <servlet-class>com.hukangjin.week3.demo.LifeCycleServlet</servlet-class>
     </servlet>
 
-<!--    <servlet>
+   <servlet>
         <servlet-name>RegisterServlet</servlet-name>
         <servlet-class>com.hukangjin.week3.demo.RegisterServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>RegisterServlet</servlet-name>
         <url-pattern>/register</url-pattern>
-    </servlet-mapping>-->
+    </servlet-mapping>
 
     <servlet>
         <servlet-name>JDBCDemoServlet</servlet-name>
@@ -46,7 +46,7 @@
         <servlet-name>ConfigDemoServlet</servlet-name>
         <servlet-class>com.ConfigDemoServlet</servlet-class>
     </servlet>
- <!--   <servlet>
+    <servlet>
         <servlet-name>SearchServlet</servlet-name>
         <servlet-class>com.hukangjin.week6.demo.SearchServlet</servlet-class>
     </servlet>
@@ -54,11 +54,14 @@
             <servlet-name>SearchServlet</servlet-name>
             <url-pattern>/search</url-pattern>
         </servlet-mapping>
-    -->
-    <!--<servlet>
-        <servlet-name>RediectServle</servlet-name>
-        <servlet-class>com.hukangjin.week6.demo.RediectServle</servlet-class>
-    </servlet>-->
+    <servlet>
+        <servlet-name>RediectServlet</servlet-name>
+        <servlet-class>com.hukangjin.week6.demo.RediectServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RediectServlet</servlet-name>
+        <url-pattern>/rediect</url-pattern>
+    </servlet-mapping>
     <servlet-mapping>
         <servlet-name>1</servlet-name>
         <url-pattern>/hello</url-pattern>
@@ -75,4 +78,7 @@
         <servlet-name>ConfigDemoServlet</servlet-name>
         <url-pattern>/config</url-pattern>
     </servlet-mapping>
+    <welcome-file-list>
+        <welcome-file>home</welcome-file>
+    </welcome-file-list>
 </web-app>
