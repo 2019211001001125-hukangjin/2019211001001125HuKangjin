@@ -1,6 +1,8 @@
 package com.hukangjin.dao;
 
+import com.example.HuKangjin2019211001001125.HelloServlet;
 import com.hukangjin.model.User;
+import com.sun.org.apache.bcel.internal.generic.IF_ACMPEQ;
 
 import javax.xml.transform.Result;
 import java.sql.Connection;
@@ -22,8 +24,17 @@ public class UserDao implements IUserDao{
         pre.setString(4,user.getEmail());
         pre.setString(5,user.getGender());
         pre.setDate(6, (java.sql.Date) user.getBirthDate());
-        pre.executeUpdate();
-        return true;
+        int N=pre.executeUpdate();
+                if (N>0)
+        {
+            return true;
+
+        }
+                else{
+                    return false;
+                }
+
+
     }
 
     @Override
