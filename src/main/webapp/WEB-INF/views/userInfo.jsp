@@ -11,19 +11,19 @@
 
 %>
 <%
-    User u=(User) session.getAttribute("user");
+    User u1=(User) session.getAttribute("user");
 %>
 <table>
-        <td>Username:</td><td><%=u.getUsername()%></td>
+        <td>Username:</td><td><%=u1.getUsername()%></td>
     </tr><tr>
-    <td>Password:</td><td><%=u.getPassword()%></td>
+    <td>Password:</td><td><%=u1.getPassword()%></td>
 </tr>
     <tr>
-    <td>Email:</td><td><%=u.getEmail()%></td>
+    <td>Email:</td><td><%=u1.getEmail()%></td>
 </tr><tr>
-    <td>Gender:</td><td><%=u.getGender()%></td>
+    <td>Gender:</td><td><%=u1.getGender()%></td>
 </tr><tr>
-    <td>Birth Date:</td><td><%=u.getBirthDate()%></td>
+    <td>Birth Date:</td><td><%=u1.getBirthDate()%></td>
 </tr>
 </table>
 <a href="updateUser">Update</a>

@@ -11,6 +11,7 @@ import java.sql.Connection;
 import java.sql.SQLException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+
 import java.sql.Date;
 import java.util.SimpleTimeZone;
 
@@ -32,9 +33,9 @@ public class UpdateUserServlet extends HttpServlet {
         String password = request.getParameter("password");
         String email = request.getParameter("email");
         String gender = request.getParameter("gender");
-        Integer id = Integer.parseInt(request.getParameter("id"));
+        Integer id = Integer.valueOf(request.getParameter("id"));
         //Date birthDate = Date.valueOf(request.getParameter("brithDate"));
-        Date birthDate=Date.valueOf(request.getParameter("birthdate"));
+        Date birthDate=Date.valueOf(request.getParameter("birthDate"));
 //        String birthdate = request.getParameter("birthDate");
         //SimpleDateFormat num =new SimpleDateFormat();
             User user=new User();
@@ -45,7 +46,6 @@ public class UpdateUserServlet extends HttpServlet {
             user.setBirthDate(birthDate);
             user.setPassword(password);
             UserDao userDao=new UserDao();
-
 //        } catch (ParseException e) {
 //            e.printStackTrace();
 //        }
@@ -55,10 +55,9 @@ public class UpdateUserServlet extends HttpServlet {
             HttpSession session=request.getSession();
             session.setMaxInactiveInterval(30);
             session.setAttribute("user",user);
-
+            request.getRequestDispatcher("WEB-INF/views/userInfo.jsp").forward(request,response);
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        request.getRequestDispatcher("WEB-INF/views/userInfo.jsp").forward(request,response);
     }
 }

@@ -11,7 +11,7 @@
     <title>Title</title>
 </head>
 <body>
-<form method="post" action="/register">
+<form method="post" action="register">
     username<input type="text" name="username"/><br/>
     password<input type="password" name="password"/><br/>
     Email<input type="text" name="email"/><br/>

@@ -62,9 +62,9 @@ public class RegisterServlet extends HttpServlet {
         //writer.println("<br>gender :"+gender);
         //writer.println("<br>birthDate :"+birthDate);
         //writer.close();
-        response.setContentType("text/html charset=utf-8");
-        PrintWriter out=response.getWriter();
-        String sql1 = "select * from hkj ";
+//        response.setContentType("text/html charset=utf-8");
+//        PrintWriter out=response.getWriter();
+        //String sql1 = "select * from hkj ";
         try {
             Statement st= con.createStatement();
             String sql="insert into hkj(username,password,email,gender,birthDate)"+
@@ -72,8 +72,8 @@ public class RegisterServlet extends HttpServlet {
             System.out.println("sql"+sql);
             int n= st.executeUpdate(sql);
             System.out.println("n-->"+n);
-            sql="select usename,password,email,gender,birthdate from hkj";
-            ResultSet rs= st.executeQuery(sql);
+            String sql1="select username,password,email,gender,birthdate from hkj";
+            ResultSet rs= st.executeQuery(sql1);
             //ResultSet re = con.createStatement().executeQuery(sql1);
            // out.println("<table border='1' align='center'>");
             //out.println("<tr>");
@@ -98,7 +98,7 @@ public class RegisterServlet extends HttpServlet {
             request.setAttribute("rsname",rs);
             request.getRequestDispatcher("userList.jsp").forward(request,response);
             System.out.println("i am in RegisterServlet-->doPost-->after forward()");
-            out.println("</table>");
+//            out.println("</table>");
         } catch (SQLException e) {
             e.printStackTrace();
         }

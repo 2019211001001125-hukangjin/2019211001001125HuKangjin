@@ -9,12 +9,14 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@include file="header.jsp"%>
 <%@ page import="java.sql.ResultSet" %>
+<%@ page import="java.io.PrintWriter" %>
 <h1>User List</h1>
 <table border="1">
     <tr><td>Id</td><td>Username</td><td>password</td><td>Email</td><td>Gender</td><td>Birthday</td>
     </tr>
     <%
         ResultSet rs=(ResultSet) request.getAttribute("rsname");
+        PrintWriter out=response.getWriter();
         if (rs==null){
         }else {
             while (rs.next()) {
