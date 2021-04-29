@@ -11,19 +11,20 @@
 
 %>
 <%
-    User user=(User) request.getAttribute("user");
+    User u=(User) session.getAttribute("user");
 %>
 <table>
-    <tr>
-        <td>Username:</td><td><%=user.getUsername()%></td>
+        <td>Username:</td><td><%=u.getUsername()%></td>
     </tr><tr>
-    <td>Password:</td><td><%=user.getPassword()%></td>
+    <td>Password:</td><td><%=u.getPassword()%></td>
+</tr>
+    <tr>
+    <td>Email:</td><td><%=u.getEmail()%></td>
 </tr><tr>
-    <td>Email:</td><td><%=user.getEmail()%></td>
+    <td>Gender:</td><td><%=u.getGender()%></td>
 </tr><tr>
-    <td>Gender:</td><td><%=user.getGender()%></td>
-</tr><tr>
-    <td>Birth Date:</td><td><%=user.getBirthDate()%></td>
+    <td>Birth Date:</td><td><%=u.getBirthDate()%></td>
 </tr>
 </table>
+<a href="updateUser">Update</a>
 <%@include file="footer.jsp"%>
