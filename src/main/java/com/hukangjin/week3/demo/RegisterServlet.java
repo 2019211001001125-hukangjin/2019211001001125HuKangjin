@@ -44,6 +44,7 @@ public class RegisterServlet extends HttpServlet {
 
         @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.getRequestDispatcher("WEB-INF/views/register.jsp").forward(request,response);
 
     }
 
@@ -72,8 +73,8 @@ public class RegisterServlet extends HttpServlet {
             System.out.println("sql"+sql);
             int n= st.executeUpdate(sql);
             System.out.println("n-->"+n);
-            String sql1="select username,password,email,gender,birthdate from hkj";
-            ResultSet rs= st.executeQuery(sql1);
+//            String sql1="select username,password,email,gender,birthdate from hkj";
+//            ResultSet rs= st.executeQuery(sql1);
             //ResultSet re = con.createStatement().executeQuery(sql1);
            // out.println("<table border='1' align='center'>");
             //out.println("<tr>");
@@ -95,10 +96,11 @@ public class RegisterServlet extends HttpServlet {
                 //out.println("<td>"+re.getString("birthdate")+"</td>");
               //  out.println("</tr>");
            // }
-            request.setAttribute("rsname",rs);
-            request.getRequestDispatcher("userList.jsp").forward(request,response);
-            System.out.println("i am in RegisterServlet-->doPost-->after forward()");
+//            request.setAttribute("rsname",rs);
+//            request.getRequestDispatcher("userList.jsp").forward(request,response);
+//            System.out.println("i am in RegisterServlet-->doPost-->after forward()");
 //            out.println("</table>");
+            response.sendRedirect("login");
         } catch (SQLException e) {
             e.printStackTrace();
         }

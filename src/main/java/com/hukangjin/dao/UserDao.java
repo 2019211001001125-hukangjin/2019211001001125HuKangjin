@@ -1,10 +1,7 @@
 package com.hukangjin.dao;
 
-import com.example.HuKangjin2019211001001125.HelloServlet;
 import com.hukangjin.model.User;
-import com.sun.org.apache.bcel.internal.generic.IF_ACMPEQ;
 
-import javax.xml.transform.Result;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
