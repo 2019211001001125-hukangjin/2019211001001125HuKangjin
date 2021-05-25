@@ -3,7 +3,11 @@ package com.hukangjin.model;
 import java.io.InputStream;
 
 public class Product {
+<<<<<<< HEAD
     private int productId;
+=======
+    private int productld;
+>>>>>>> github.com/master
     private String productName;
     private String productDescription;
     private InputStream picture;
@@ -12,8 +16,13 @@ public class Product {
 
     public Product(){}
 
+<<<<<<< HEAD
     public Product(int productId, String productName, String productDescription, InputStream picture, double price, int categoryId) {
         this.productId = productId;
+=======
+    public Product(int productld, String productName, String productDescription, InputStream picture, double price, int categoryId) {
+        this.productld = productld;
+>>>>>>> github.com/master
         this.productName = productName;
         this.productDescription = productDescription;
         this.picture = picture;
@@ -21,12 +30,21 @@ public class Product {
         this.categoryId = categoryId;
     }
 
+<<<<<<< HEAD
     public int getProductId() {
         return productId;
     }
 
     public void setProductId(int productId) {
         this.productId = productId;
+=======
+    public int getProductld() {
+        return productld;
+    }
+
+    public void setProductld(int productld) {
+        this.productld = productld;
+>>>>>>> github.com/master
     }
 
     public String getProductName() {
@@ -72,7 +90,11 @@ public class Product {
     @Override
     public String toString() {
         return "Product{" +
+<<<<<<< HEAD
                 "productId=" + productId +
+=======
+                "productld=" + productld +
+>>>>>>> github.com/master
                 ", productName='" + productName + '\'' +
                 ", productDescription='" + productDescription + '\'' +
                 ", picture=" + picture +
