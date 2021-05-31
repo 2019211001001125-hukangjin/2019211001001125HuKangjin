@@ -35,7 +35,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-6">
-						<div class="contactinfo">
+ 						<div class="contactinfo">
 							<ul class="nav nav-pills">
 								<li><a href="#"><i class="fa fa-phone"></i> +2 95 01 88 821</a></li>
 								<li><a href="#"><i class="fa fa-envelope"></i> info@ecjtu.com</a></li>
@@ -100,7 +100,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 								<li><a href="<%=basePath%>accountDetails"><i class="fa fa-user"></i> Account</a></li>
 								
 								
-								<li><a href="<%=basePath%>myCart"><i class="fa fa-shopping-cart"></i> Cart</a></li>
+								<li><a href="<%=basePath%>cart"><i class="fa fa-shopping-cart"></i> Cart</a></li>
 								<li><a href="<%=basePath%>register"><i class="fa fa-crosshairs"></i> Register</a></li>
 								<li><a href="<%=basePath%>login"><i class="fa fa-lock"></i> Login</a></li>
 								<li><a href="<%=basePath%>logout"><i class="fa fa-unlock"></i> Logout</a></li>
@@ -130,7 +130,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                                     <ul role="menu" class="sub-menu">
                                         <li><a href="<%=basePath%>shop">Products</a></li>
 										<!--<li><a href="product-details.html">Product Details</a></li>  -->
-										<li><a href="<%=basePath%>myCart">Cart</a></li> 
+										<li><a href="<%=basePath%>cart">Cart</a></li>
 										<li><a href="<%=basePath%>order">Order</a></li>
 										
 										<%-- <li><a href="<%=basePath%>login">Login</a></li>  --%>
