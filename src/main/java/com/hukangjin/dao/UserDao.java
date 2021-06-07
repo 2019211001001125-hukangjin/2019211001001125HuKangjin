@@ -14,7 +14,7 @@ public class UserDao implements IUserDao{
     @Override
     public boolean saveUser(Connection con, User user) throws SQLException {
 //        String sql = "update hkj set username=?,password=?,email=?,gender=?,birthdate=?,where id=?";
-        String sql = "insert into usertable(id,username,email,gender,birthdate,password) values(?,?,?,?,?,?) " ;
+        String sql = "insert into hkj(id,username,email,gender,birthdate,password) values(?,?,?,?,?,?) " ;
         PreparedStatement st = con.prepareStatement(sql);
         st.executeUpdate();
         st.setInt(1,user.getId());
